@@ -1,0 +1,43 @@
+entity Author {
+	username String required
+    email String required
+    password String required
+}
+
+entity MeasuringUnit {
+	name String required
+    abbreviation String
+}
+
+entity Ingredient {
+	name String required
+}
+
+entity RecipeIngredient {
+	amount Integer
+}
+
+entity Instruction {
+	stepNumber Integer
+    description String
+}
+
+entity Recipe {
+	name String required
+    description String
+    prepTime Integer
+    cookTime Integer
+    servings Integer
+    imageUrl String
+}
+
+relationship ManyToOne {
+	RecipeIngredient{ingredient} to Ingredient
+    RecipeIngredient{unit} to MeasuringUnit
+    Recipe{author} to Author{recipes}
+}
+
+relationship OneToMany {
+	Recipe{ingredients} to RecipeIngredient{recipe}
+    Recipe{instructions} to Instruction{recipe}
+}

@@ -1,0 +1,25 @@
+{
+  "applications": "*",
+  "changelogDate": "20230315183202",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "measuring_unit",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "abbreviation",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "MeasuringUnit",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "no"
+}

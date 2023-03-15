@@ -81,6 +81,15 @@ public class CacheConfiguration {
             createCache(cm, com.marvelousanything.jhipster.domain.User.class.getName(), jcacheConfiguration);
             createCache(cm, com.marvelousanything.jhipster.domain.Authority.class.getName(), jcacheConfiguration);
             createCache(cm, com.marvelousanything.jhipster.domain.User.class.getName() + ".authorities", jcacheConfiguration);
+            createCache(cm, com.marvelousanything.jhipster.domain.Author.class.getName(), jcacheConfiguration);
+            createCache(cm, com.marvelousanything.jhipster.domain.Author.class.getName() + ".recipes", jcacheConfiguration);
+            createCache(cm, com.marvelousanything.jhipster.domain.MeasuringUnit.class.getName(), jcacheConfiguration);
+            createCache(cm, com.marvelousanything.jhipster.domain.Ingredient.class.getName(), jcacheConfiguration);
+            createCache(cm, com.marvelousanything.jhipster.domain.RecipeIngredient.class.getName(), jcacheConfiguration);
+            createCache(cm, com.marvelousanything.jhipster.domain.Instruction.class.getName(), jcacheConfiguration);
+            createCache(cm, com.marvelousanything.jhipster.domain.Recipe.class.getName(), jcacheConfiguration);
+            createCache(cm, com.marvelousanything.jhipster.domain.Recipe.class.getName() + ".ingredients", jcacheConfiguration);
+            createCache(cm, com.marvelousanything.jhipster.domain.Recipe.class.getName() + ".instructions", jcacheConfiguration);
             // jhipster-needle-redis-add-entry
         };
     }
