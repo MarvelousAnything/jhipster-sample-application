@@ -1,0 +1,31 @@
+{
+  "applications": "*",
+  "changelogDate": "20230315183205",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "instruction",
+  "fields": [
+    {
+      "fieldName": "stepNumber",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Instruction",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "recipe",
+      "otherEntityRelationshipName": "instructions",
+      "relationshipName": "recipe",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

@@ -1,0 +1,60 @@
+{
+  "applications": "*",
+  "changelogDate": "20230315183206",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "recipe",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "prepTime",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "cookTime",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "servings",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "imageUrl",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Recipe",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "recipeIngredient",
+      "otherEntityRelationshipName": "recipe",
+      "relationshipName": "ingredients",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "instruction",
+      "otherEntityRelationshipName": "recipe",
+      "relationshipName": "instructions",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "author",
+      "otherEntityRelationshipName": "recipes",
+      "relationshipName": "author",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}
